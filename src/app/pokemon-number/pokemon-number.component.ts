@@ -6,10 +6,12 @@ import { PokemonsService } from '../pokemons.service';
   templateUrl: './pokemon-number.component.html',
   styleUrls: ['./pokemon-number.component.css']
 })
+
 export class PokemonNumberComponent implements OnInit {
 	pokemon = null;
+	id = 3;
   constructor(private pokemonsService: PokemonsService) { 
-  pokemonsService.getAll().subscribe(
+  pokemonsService.getById(this.id).subscribe(
   	data => {
   		this.pokemon = data
   		console.log(this.pokemon)

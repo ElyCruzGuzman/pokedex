@@ -7,12 +7,12 @@ export class PokemonsService {
   constructor(private http: HttpClient) { }
 
   public getAll(){
-  	return this.http.get('http://pokeapi.co/api/v2/pokemon/1')
+  	return this.http.get('http://pokeapi.co/api/v2/pokemon/')
   }
   public getById(id){
-  	return this.http.get(`http://pokeapi.co/api/v2/pokemon/${id}`)
+  	return this.http.get('http://pokeapi.co/api/v2/pokemon/' + id)
   }
   public getByType(type){
-  	return this.http.get(`http://pokeapi.co/api/v2/pokemon/${type}`)
+  	return this.http.get('http://pokeapi.co/api/v2/pokemon/' + type)
   }
 }
