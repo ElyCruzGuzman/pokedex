@@ -6,8 +6,8 @@ export class PokemonsService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(){
-  	return this.http.get('http://pokeapi.co/api/v2/pokemon/')
+  public getInfo(url){
+  	return this.http.get(url)
   }
   public getById(id:number){
   	return this.http.get('http://pokeapi.co/api/v2/pokemon/' + id)

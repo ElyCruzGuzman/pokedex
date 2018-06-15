@@ -1,3 +1,13 @@
 mat-form-field {
 	margin-left: 10px;
 }
+
+.mat-card-avatar {
+	height: 140px;
+  width: 140px;
+}
+
+mat-card {
+	width: 150px;
+	display: inline-flex;
+}

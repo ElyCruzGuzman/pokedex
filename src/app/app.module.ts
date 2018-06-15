@@ -15,7 +15,7 @@ import { PokemonTypeComponent } from './pokemon-type/pokemon-type.component';
 
 const appRoutes: Routes = [
   { path: 'pokemon-number', component: PokemonNumberComponent },
-  { path: 'pokemon-type', component: PokemonTypeComponent }
+  { path: 'pokemon-type', component: PokemonTypeComponent },
 ]
 
 @NgModule({
