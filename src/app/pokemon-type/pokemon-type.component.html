@@ -1,15 +1,17 @@
 <mat-form-field>
   <mat-select placeholder="Type of Pokemon">
-    <mat-option *ngFor="let type of types" [value]="type.value">
+    <mat-option *ngFor="let type of types" [value]="type.value" (click)='searchType(type.value)'>
       {{ type.viewValue }}
     </mat-option>
   </mat-select>
 </mat-form-field>
 
-<mat-card *ngIf='pokemon' class="example-card">
-  <mat-card-content>
-    <img [src]='pokemon.sprites.front_default' mat-card-avatar >
-    <mat-card-title>{{pokemon.name | uppercase}}</mat-card-title>
-    <mat-card-subtitle>{{pokemon.types[0].type.name}}</mat-card-subtitle>
-  </mat-card-content>
-</mat-card>
+<div  *ngIf="pokemons">
+	<mat-card class="example-card" *ngFor="let pokemon of pokemons">
+	  <mat-card-content>
+	    <!-- <img [src]='pokemon.sprites.front_default' mat-card-avatar > -->
+	    <mat-card-title>{{pokemon.pokemon.name | uppercase}}</mat-card-title>
+	    <!-- <mat-card-subtitle>{{pokemon.types[0].type.name}}</mat-card-subtitle> -->
+	  </mat-card-content>
+	</mat-card>
+</div>

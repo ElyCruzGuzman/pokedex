@@ -8,7 +8,7 @@ import { PokemonsService } from '../pokemons.service';
   styleUrls: ['./pokemon-type.component.css']
 })
 export class PokemonTypeComponent implements OnInit {
-
+  pokemons = null;
 	types = [
     {value: '1', viewValue: 'Normal'},
     {value: '2', viewValue: 'Fighting'},
@@ -35,4 +35,11 @@ export class PokemonTypeComponent implements OnInit {
   ngOnInit() {
   }
 
+  searchType(type:number){
+    this.pokemonsService.getByType(type).subscribe(
+      data => {
+        this.pokemons = data.pokemon
+        console.log(this.pokemons)
+      })
+  }
 }
