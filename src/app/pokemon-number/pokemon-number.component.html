@@ -1,9 +1,10 @@
-<input [(ngModel)]='pokeId' type="number" name="Search" id="pokeId" placeholder="1" value="1">
-<button mat-raised-button>Search</button>
+<input type="number" name="Search" placeholder="For example 1" (keyup.enter) = 'searchPokemon(id.value)' #id>
+<button mat-raised-button type="button" (click)='searchPokemon(id.value)'>Search</button>
 
 <mat-card *ngIf='pokemon' class="example-card">
-  <mat-card-header>
+  <mat-card-content>
     <img [src]='pokemon.sprites.front_default' mat-card-avatar >
     <mat-card-title>{{pokemon.name | uppercase}}</mat-card-title>
-  </mat-card-header>
+    <mat-card-subtitle>{{pokemon.types[0].type.name}}</mat-card-subtitle>
+  </mat-card-content>
 </mat-card>

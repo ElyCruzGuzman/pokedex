@@ -9,10 +9,10 @@ export class PokemonsService {
   public getAll(){
   	return this.http.get('http://pokeapi.co/api/v2/pokemon/')
   }
-  public getById(id){
+  public getById(id:number){
   	return this.http.get('http://pokeapi.co/api/v2/pokemon/' + id)
   }
-  public getByType(type){
-  	return this.http.get('http://pokeapi.co/api/v2/pokemon/' + type)
+  public getByType(type:number){
+  	return this.http.get('http://pokeapi.co/api/v2/type/' + type)
   }
 }

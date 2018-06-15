@@ -1,3 +1,15 @@
-<mat-select>
-	<mat-option>Fuego</mat-option>
-</mat-select>	
+<mat-form-field>
+  <mat-select placeholder="Type of Pokemon">
+    <mat-option *ngFor="let type of types" [value]="type.value">
+      {{ type.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-card *ngIf='pokemon' class="example-card">
+  <mat-card-content>
+    <img [src]='pokemon.sprites.front_default' mat-card-avatar >
+    <mat-card-title>{{pokemon.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{pokemon.types[0].type.name}}</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>

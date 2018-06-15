@@ -9,16 +9,17 @@ import { PokemonsService } from '../pokemons.service';
 
 export class PokemonNumberComponent implements OnInit {
 	pokemon = null;
-	id = 3;
-  constructor(private pokemonsService: PokemonsService) { 
-  pokemonsService.getById(this.id).subscribe(
-  	data => {
-  		this.pokemon = data
-  		console.log(this.pokemon)
-  	});
-	}
+
+  constructor(private pokemonsService: PokemonsService) {}
 
   ngOnInit() {
   }
 
+  searchPokemon(id:number){
+  	this.pokemonsService.getById(id).subscribe(
+  		data => {
+  		this.pokemon = data
+  		console.log(this.pokemon)
+  	});
+  }
 }
