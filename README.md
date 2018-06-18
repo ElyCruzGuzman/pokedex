@@ -1,19 +1,23 @@
 # pokedex
 
-This project was generated with Angular CLI version 6.0.8 and Angular Material version 6.2.1
+-This project was generated with Angular CLI version 6.0.8 and Angular Material version 6.2.1
 
-Installation
+## Installation
 
-Clone or download repository
+-Clone or download repository
 
-Install the dependencies
+-Install the dependencies
 
+```
 npm install
+```
 
-Usage
+## Usage
 
-Launch the project
+-Launch the project
 
+```
 ng serve
+```
 
 The app will be served 'http://localhost:4200' with hot reload
