@@ -38,7 +38,7 @@ export class PokemonTypeComponent implements OnInit {
   searchType(type:number){
     this.pokemonsService.getByType(type).subscribe(
       data1 => {
-        this.pokemons = data1.pokemon
+        this.pokemons = data1
         console.log(this.pokemons)
       })
   }
