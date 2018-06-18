@@ -12,6 +12,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { PokemonsService } from './pokemons.service';
 import { PokemonNumberComponent } from './pokemon-number/pokemon-number.component';
 import { PokemonTypeComponent } from './pokemon-type/pokemon-type.component';
+import { FilterPipe } from './filter.pipe';
 
 const appRoutes: Routes = [
   { path: 'pokemon-number', component: PokemonNumberComponent },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     MyNavComponent,
     PokemonNumberComponent,
-    PokemonTypeComponent
+    PokemonTypeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

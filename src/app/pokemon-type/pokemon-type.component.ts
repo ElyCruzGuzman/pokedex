@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from '../pokemons.service';
 
-
 @Component({
   selector: 'app-pokemon-type',
   templateUrl: './pokemon-type.component.html',
-  styleUrls: ['./pokemon-type.component.css']
+  styleUrls: ['./pokemon-type.component.css'],
 })
 export class PokemonTypeComponent implements OnInit {
-  pokemons = [];
+  pokemons = null;
   poke = null;
 	types = [
     {value: '1', viewValue: 'Normal'},
